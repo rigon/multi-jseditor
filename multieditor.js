@@ -1,5 +1,5 @@
 /**************************************************************************
- * Customizable toolbars for Ace Editor - https://github.com/rigon/ace-toolbar
+ * Library to handle multiple JavaScript-based source code editors - https://github.com/rigon/multi-jseditor
  * Copyright (C) 2017  rigon<ricardompgoncalves@gmail.com>
  *
  * This program is free software: you can redistribute it and/or modify
@@ -16,25 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *************************************************************************/
 
-function acetoolbar(htmlElement, customOptions) {
+function multieditor(htmlElement, customOptions) {
 	var self = this;					// Reference for this object
 
 	this.container = $(htmlElement);	// jQuery object of the selected HTML element
-	this.editor;						// Container for Ace Editor
-	this.aceEditor;						// Ace Editor
+	this.editor;						// Handler for Editor
 	this.options = {					// List of default options
-		toolbar: {
-			show: true,
-			attr: {},
-			list: [],
-			buttons: {}
-		},
-		statusbar: {
-			show: true,
-			attr: {},
-			list: [],
-			buttons: {}
-		}
+		editor: "textarea",
+		lang: "plaintext",
 	};
 
 	this.loadLangConfig = function(lang) {
@@ -226,14 +215,14 @@ function acetoolbar(htmlElement, customOptions) {
 }
 
 jQuery.fn.extend({
-	acetoolbar: function(options) {
+	multieditor: function(options) {
 		// If custom options not provided
 		if(typeof options === "undefined")
 			options = {};
 
 		return this.each(function() {
 			// Deep copy of options
-			return new acetoolbar(this, jQuery.extend(true, {}, options));
+			return new multieditor(this, jQuery.extend(true, {}, options));
 		});
 	}
 });
