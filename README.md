@@ -1,3 +1,5 @@
-# Ace toolbar
+# Multi JS editor
 
-Customizable toolbars for [Ace Editor](https://ace.c9.io)
+Library to handle multiple JavaScript-based source code editors
+
+[Comparison of JavaScript-based source code editors](https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors)
