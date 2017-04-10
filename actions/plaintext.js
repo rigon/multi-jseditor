@@ -31,4 +31,4 @@ function multieditor_plaintext(editor) {
 }
 
 // Set actions for this language
-multieditor.prototype.actions = multieditor_plaintext;
+multieditor.prototype.actions_class = multieditor_plaintext;

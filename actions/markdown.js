@@ -31,4 +31,4 @@ function multieditor_markdown(editor) {
 }
 
 // Set actions for this language
-multieditor.prototype.actions = multieditor_markdown;
+multieditor.prototype.actions_class = multieditor_markdown;

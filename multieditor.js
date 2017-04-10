@@ -18,11 +18,12 @@
 
 // https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors
 
-function multieditor(htmlElement, customOptions) {
+function multieditor(container, customOptions) {
 	var self = this;					// Reference for this object
 
-	this.container = $(htmlElement);	// jQuery object of the selected HTML element
+	this.container = container;			// HTML element where to place the editor
 	this.editor;						// Handler for Editor
+	this.actions;						// General actions for the selected language
 	this.options = {					// List of default options
 		editor: "textarea",
 		lang: "plaintext",
@@ -60,6 +61,9 @@ function multieditor(htmlElement, customOptions) {
 		if(!this.isEditorLoaded || !this.isActionsLoaded) return;
 
 		console.log("Let's create the editor");
+
+		this.editor = new this.editor_class(this.container);
+		this.actions = new this.actions_class(this.editor);
 	}
 
 	// Process options
