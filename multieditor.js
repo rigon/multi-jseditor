@@ -72,6 +72,9 @@ function multieditor(container, customOptions) {
 	this.loadEditor(this.options.editor);
 	// Load actions
 	this.loadActions(this.options.lang);
+	
+	var md = new MobileDetect(window.navigator.userAgent);
+	console.log(md.mobile());
 }
 
 jQuery.fn.extend({
