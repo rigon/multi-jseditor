@@ -17,6 +17,8 @@
  *************************************************************************/
 
 multieditor.prototype.editor_class = function(element) {
+	this.element = element;
+
 	this.themes = {
 		ambiance: "Ambiance",
 		chaos: "Chaos",
@@ -79,6 +81,7 @@ multieditor.prototype.editor_class = function(element) {
 		d: "D",
 		dart: "Dart",
 		diff: "Diff",
+		django: "Django",
 		dockerfile: "Dockerfile",
 		dot: "Dot",
 		drools: "Drools",
@@ -191,14 +194,29 @@ multieditor.prototype.editor_class = function(element) {
 		wollok: "Wollok",
 		xml: "XML",
 		xquery: "XQuery",
-		yaml: "YAML",
-		django: "Django"
+		yaml: "YAML"
 	}
 
 
-	this.element = element;
+	// Set theme
+	this.setTheme = function(theme) {
+		if(!(theme in this.themes))
+			throw "Theme " + theme + " is not supported";
+		this.obj.setTheme("ace/theme/" + theme);
+	}
 
-	var editor = ace.edit(element);
-	editor.setTheme("ace/theme/monokai");
-	editor.getSession().setMode("ace/mode/javascript");
+	// Set Language
+	this.setLang = function(lang) {
+		if(!(lang in this.langs))
+			throw "Language mode " + lang + " is not supported";
+		this.obj.getSession().setMode("ace/mode/" + lang);
+	}
+
+
+	// Check if Ace editor is loaded
+	if(typeof ace !== "object")
+		throw "Ace editor is not loaded";
+
+	// Create Ace editor
+	this.obj = ace.edit(element);
 }

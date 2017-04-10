@@ -60,10 +60,11 @@ function multieditor(container, customOptions) {
 		// If editor or actions are not loaded
 		if(!this.isEditorLoaded || !this.isActionsLoaded) return;
 
-		console.log("Let's create the editor");
-
 		this.editor = new this.editor_class(this.container);
 		this.actions = new this.actions_class(this.editor);
+
+		this.editor.setLang(this.options.lang);
+		this.editor.setTheme(this.options.theme);
 	}
 
 	// Process options
@@ -72,9 +73,9 @@ function multieditor(container, customOptions) {
 	this.loadEditor(this.options.editor);
 	// Load actions
 	this.loadActions(this.options.lang);
-	
+
 	var md = new MobileDetect(window.navigator.userAgent);
-	console.log(md.mobile());
+	console.log("Is mobile: " + md.mobile());
 }
 
 jQuery.fn.extend({
