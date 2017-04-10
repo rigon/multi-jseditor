@@ -24,8 +24,17 @@
 			window.onload = function() {
 				$(".editor").multieditor({
 					lang: "markdown",
+					theme: "dreamweaver",
 					editor: "ace",
-					theme: "dreamweaver"
+					editors: {
+						full: {
+							target: "desktop",
+						},
+						tiny: {
+							target: "mobile",
+							editor: "textarea"
+						}
+					}
 				});
 			}
 		</script>

@@ -27,6 +27,7 @@ function multieditor(container, customOptions) {
 	this.options = {					// List of default options
 		editor: "textarea",
 		lang: "plaintext",
+		editors: { default: {}}
 	};
 
 	this.isEditorLoaded = false;
@@ -36,10 +37,22 @@ function multieditor(container, customOptions) {
 		// Incompatible data type
 		if(typeof newOptions !== "object") return;
 
+		// Replace default list of editors
+		if(typeof newOptions.editors === "object")
+			this.options.editors = newOptions.editors;
+		
 		// Iterate over newOptions
 		for(var attribute in newOptions) {
+			// Skip editors option
+			if(attribute === "editors") continue;
+
 			// Copy values to in options
 			this.options[attribute] = newOptions[attribute];
+
+			// Copy general options to all editors
+			for(editor in this.options.editors)
+				if(typeof this.options.editors[editor][attribute] === "undefined")	// Copy option if not present
+					this.options.editors[editor][attribute] = newOptions[attribute];
 		}
 	}
 
@@ -69,6 +82,7 @@ function multieditor(container, customOptions) {
 
 	// Process options
 	this.processOptions(customOptions);
+	console.log(this.options);
 	// Load editor
 	this.loadEditor(this.options.editor);
 	// Load actions
