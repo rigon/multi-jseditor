@@ -27,6 +27,7 @@ function multieditor(container, customOptions) {
 	this.options = {					// List of default options
 		editor: "textarea",
 		lang: "plaintext",
+		target: "desktop",
 		editors: { default: {}}
 	};
 
@@ -56,6 +57,22 @@ function multieditor(container, customOptions) {
 		}
 	}
 
+	this.selectEditor = function(list) {
+		var selected = list[Object.keys(list)[0]];
+
+		var md = new MobileDetect(window.navigator.userAgent);
+		var isMobile = (md.mobile() != null);
+
+		for(var editorId in list) {
+			var editor = list[editorId];
+			// Conditions to select the best editor
+			if(isMobile && editor.target == "desktop")	// Mobile browser
+				selected = editor;
+		}
+
+		return selected;
+	}
+
 	this.loadEditor = function(editor) {
 		$.getScript(editor + "/" + editor + ".js", function (script, textStatus, jqXHR) {
 			self.isEditorLoaded = true;
@@ -83,13 +100,12 @@ function multieditor(container, customOptions) {
 	// Process options
 	this.processOptions(customOptions);
 	console.log(this.options);
+	var selectedEditor = this.selectEditor(this.options.editors);
+	console.log(selectedEditor);
 	// Load editor
 	this.loadEditor(this.options.editor);
 	// Load actions
 	this.loadActions(this.options.lang);
-
-	var md = new MobileDetect(window.navigator.userAgent);
-	console.log("Is mobile: " + md.mobile());
 }
 
 jQuery.fn.extend({
