@@ -16,8 +16,6 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *************************************************************************/
 
-// https://en.wikipedia.org/wiki/Comparison_of_JavaScript-based_source_code_editors
-
 function multieditor(container, customOptions) {
 	var self = this;					// Reference for this object
 
@@ -99,13 +97,11 @@ function multieditor(container, customOptions) {
 
 	// Process options
 	this.processOptions(customOptions);
-	console.log(this.options);
 	var selectedEditor = this.selectEditor(this.options.editors);
-	console.log(selectedEditor);
 	// Load editor
-	this.loadEditor(this.options.editor);
+	this.loadEditor(selectedEditor.editor);
 	// Load actions
-	this.loadActions(this.options.lang);
+	this.loadActions(selectedEditor.lang);
 }
 
 jQuery.fn.extend({
