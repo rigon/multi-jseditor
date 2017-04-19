@@ -19,16 +19,25 @@
 multieditor.prototype.editor_class = function(element) {
 
 	this.setOptions = function(options) {
+		var vsOptions = {}
+		console.log(options);
+
 		for(var name in options) {
-			var value = options;
+			var value = options[name];
 
 			switch(name) {
+				case "theme": vsOptions.theme = value; break;
+				case "lang": vsOptions.language = value; break;
 				default:
 					throw "Option not supported: " + name;
 			}
 		}
+
+		require.config({ paths: { 'vs': 'bower_components/monaco-editor/release/min/vs' }});
+		require(['vs/editor/editor.main'], function() {
+			var editor = monaco.editor.create(element, vsOptions);
+		});
 	}
 
 	this.element = element;
-	this.element.append("<div></div>");
 }

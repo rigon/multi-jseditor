@@ -71,20 +71,22 @@ function multieditor(container, customOptions) {
 		return selected;
 	}
 
-	this.loadEditor = function(editor) {
+	this.loadEditor = function(options) {
+		var editor = options.editor;
 		$.getScript(editor + "/" + editor + ".js", function (script, textStatus, jqXHR) {
 			self.isEditorLoaded = true;
-			self.create();
+			self.create(options);
 		});
 	}
-	this.loadActions = function(lang) {
+	this.loadActions = function(options) {
+		var lang = options.lang;
 		$.getScript("actions/" + lang + ".js", function (script, textStatus, jqXHR) {
 			self.isActionsLoaded = true;
-			self.create();
+			self.create(options);
 		});
 	}
 
-	this.create = function() {
+	this.create = function(options) {
 		// If editor or actions are not loaded
 		if(!this.isEditorLoaded || !this.isActionsLoaded) return;
 
@@ -92,8 +94,8 @@ function multieditor(container, customOptions) {
 		this.actions = new this.actions_class(this.editor);
 
 		this.editor.setOptions({
-			lang: this.options.lang,
-			theme: this.options.theme
+			lang: options.lang,
+			theme: options.theme
 		});
 	}
 
@@ -101,9 +103,9 @@ function multieditor(container, customOptions) {
 	this.processOptions(customOptions);
 	var selectedEditor = this.selectEditor(this.options.editors);
 	// Load editor
-	this.loadEditor(selectedEditor.editor);
+	this.loadEditor(selectedEditor);
 	// Load actions
-	this.loadActions(selectedEditor.lang);
+	this.loadActions(selectedEditor);
 }
 
 jQuery.fn.extend({
