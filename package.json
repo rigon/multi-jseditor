@@ -1,0 +1,24 @@
+{
+  "name": "ace-toolbar",
+  "main": "index.html",
+  "homepage": "https://github.com/rigon/ace-toolbar",
+  "authors": [
+    "rigon <ricardompgoncalves@gmail.com>"
+  ],
+  "description": "Customizable toolbars for Ace Editor",
+  "keywords": [
+    "notes"
+  ],
+  "license": "GPL",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "http-server": "^0.9.0"
+  }
+}
