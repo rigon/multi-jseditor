@@ -9,3 +9,8 @@ Library to handle multiple JavaScript-based source code editors
 - [HTML Text Area](https://www.w3schools.com/tags/tag_textarea.asp) (`textarea`)
 - [VS Code (Monoco editor)](https://microsoft.github.io/monaco-editor/) (`vscode`)
 - [Ace Editor](https://ace.c9.io/) (`ace`)
+
+## Local server
+
+	npm install
+	gulp simpleserver
