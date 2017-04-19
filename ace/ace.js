@@ -197,6 +197,19 @@ multieditor.prototype.editor_class = function(element) {
 		yaml: "YAML"
 	}
 
+	this.setOptions = function(options) {
+		for(var name in options) {
+			var value = options;
+
+			switch(name) {
+				case "theme": this.setTheme(value); break;
+				case "lang": this.setLang(value); break;
+				default:
+					throw "Option not supported: " + name;
+			}
+		}
+	}
+
 
 	// Set theme
 	this.setTheme = function(theme) {

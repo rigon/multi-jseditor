@@ -17,7 +17,21 @@
  *************************************************************************/
 
 multieditor.prototype.editor_class = function(element) {
+
+	this.setOptions = function(options) {
+		for(var name in options) {
+			var value = options;
+
+			switch(name) {
+				case "theme": console.log("Ignoring option to set theme"); break;
+				case "lang": console.log("Ignoring option to set language"); break;
+				default:
+					throw "Option not supported: " + name;
+			}
+		}
+	}
+
+
 	this.element = $(element);
-	
 	this.element.append("<textarea></textarea>");
 }

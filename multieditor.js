@@ -91,8 +91,10 @@ function multieditor(container, customOptions) {
 		this.editor = new this.editor_class(this.container);
 		this.actions = new this.actions_class(this.editor);
 
-		this.editor.setLang(this.options.lang);
-		this.editor.setTheme(this.options.theme);
+		this.editor.setOptions({
+			lang: this.options.lang,
+			theme: this.options.theme
+		});
 	}
 
 	// Process options
