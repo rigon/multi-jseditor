@@ -17,7 +17,6 @@
  *************************************************************************/
 
 multieditor.prototype.editor_class = function(element) {
-	this.element = element;
 
 	this.themes = {
 		ambiance: "Ambiance",
@@ -225,6 +224,8 @@ multieditor.prototype.editor_class = function(element) {
 		this.obj.getSession().setMode("ace/mode/" + lang);
 	}
 
+	
+	this.element = element;
 
 	// Check if Ace editor is loaded
 	if(typeof ace !== "object")
