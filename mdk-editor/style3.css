@@ -1,0 +1,102 @@
+.select
+{
+	background-color: Maroon;
+}
+#linenumbers
+{
+	background-color: #253945;
+	color: DimGray;
+}
+.curserWriteON
+{
+	border-left:solid 1px #FFF;
+}
+.curserOverWriteON
+{
+	border-left:0px;
+	background-color:Maroon;
+	color:White;
+}
+.curserOFF
+{
+	border-left:0px;
+	background-color:Transparent;
+}
+#editor
+{
+	border-left: 1px solid #253945;
+	border-bottom: 1px solid #253945;
+}
+#content
+{
+	color: white;
+}
+#pre1, #pre2, #post1, #post2,#xmlStart, #xmlFinish
+{
+	font-size:16px;
+	background-color: yellow;
+	filter:alpha(opacity=20);
+	opacity:0.2;
+}
+#xmlStart, #xmlFinish
+{
+	background-color: pink;
+}
+#secondary
+{
+	color: #253945;
+	background-color: #253945;
+}
+#editorinfo
+{
+	background-color: #253945;
+	color: DimGray;
+	border-top:1px solid DimGray;
+}
+#scrollbarY, #scrollbarX_bg
+{
+	background-color:#253945;
+}
+/* SYNTAX HIGHLLIGHT */
+i	 {	color:PowderBlue; }
+
+/*	Javascript
+	natively white text, chalkboard color bg
+*/
+b.jsLang{	color: Chocolate;}
+b.jsFun{	color: Cyan;}
+b.jsObj{	color: Chartreuse;}
+b.jsMeth{	color: CornflowerBlue;}
+b.jsEvent{	color: CornflowerBlue;}
+b.jsNum{	color: Yellow;}
+b.jsRegx{	color: Cyan;}
+b.jsStr {	color: LawnGreen;}
+b.jsCom {	color: DimGray;}
+
+/*	XML  */
+b.xmlComment		{ color:ForestGreen; }
+b.xmlInstruction	{ color:yellow; }
+b.xmlElement		{ color: DarkSalmon; }
+b.xmlElementScript	{ color: DarkSalmon; }
+b.xmlElementStyle	{ color: DarkSalmon; }
+b.xmlAttributeName  { color: Dimgray; }
+b.xmlAttributeEqual { color: DimGray; }
+b.xmlAttributeValue { color:grayText; }
+b.xmlText			{}
+b.xmlWhitespace		{}
+b.xmlDoctype		{ color:gray; }
+b.xmlCDataOpen,
+b.xmlCDataClose		{ color:red; }
+b.xmlCData			{ color:White; font-style:italic; }
+
+/* 	CSS : natively black text, white background */
+/* selector (#id, .Class, @something)*/
+b.cssSel{ color:DarkSalmon; }
+b.cssKey{ color:Chocolate; }
+b.cssVal{ color:CornflowerBlue; }
+/* string: url('str str') */
+b.cssStr{ color:LawnGreen; }
+/* comment */
+b.cssCom{ color:DimGray; }
+/* @media */
+b.cssMed{ color:yellow; }
