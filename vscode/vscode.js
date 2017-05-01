@@ -18,6 +18,50 @@
 
 multieditor.prototype.editor_class = function(element) {
 
+	this.themes = {
+		'vs': "Visual Studio",
+		'vs-dark': "Visual Studio Dark",
+		'hc-black': "High Contrast Dark"
+	}
+
+	this.langs = {
+		bat: "Batch",
+		c: "C",
+		coffeescript: "CoffeeScript",
+		cpp: "C++",
+		csharp: "C#",
+		css: "CSS",
+		dockerfile: "DockerFile",
+		fsharp: "F#",
+		go: "Go",
+		handlebars: "Handlebars",
+		html: "HTML",
+		ini: ".ini",
+		jade: "Jade",
+		java: "Java",
+		javascript: "JavaScript",
+		json: "JSON",
+		less: "LESS",
+		lua: "Lua",
+		markdown: "Markdown",
+		'objective-c': "Objective-C",
+		php: "PHP",
+		plaintext: "Plain Text",
+		postiats: "Postiats",
+		powershell: "Power Shell",
+		python: "Python",
+		r: "R",
+		razor: "Razor",
+		ruby: "Ruby",
+		scss: "SCSS",
+		sql: "SQL",
+		swift: "Swift",
+		typescript: "TypeScript",
+		vb: "Visual Basic",
+		xml: "XML",
+		yaml: "YAML"
+	}
+
 	this.setOptions = function(options) {
 		var vsOptions = {}
 		console.log(options);
