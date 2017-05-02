@@ -79,7 +79,8 @@ window.onfocus = function()
 		Curser.SwitchOnOff(true);
 }
 
-window.onload = function()
+//window.onload = function()
+function createMDKEditor()
 {
 	/*var OS = navigator.userAgent.match(/windows nt [\d.]+/gi);
 	if(OS){		var vers = OS[0].match(/[\d.]+/) * 1;
