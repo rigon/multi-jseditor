@@ -1,0 +1,128 @@
+.select
+{
+	background-color:#ccc;
+	font-size:13px;
+	line-height:17px;
+	padding-top:1px;
+}
+#linenumbers
+{
+	background-color:White;
+	color:darkcyan;
+	background-repeat:repeat-y;
+	background-image:url('tab.gif');
+	background-position:60px;
+	font-size:13px;
+	line-height:17px;
+}
+#curser
+{
+	width: 8px;
+	height: 16px;
+}
+.curserWriteON
+{
+	border-left:solid 1px #000;
+}
+.curserOverWriteON
+{
+	border-left:0px;
+	background-color:Black;
+	color:White;
+}
+.curserOFF
+{
+	border-left:0px;
+	background-color:Transparent;
+}
+#editor
+{
+	border-left:1px solid white;
+	border-bottom:1px solid white;
+}
+#content
+{
+	color:Black;
+	font-size:13px;
+	line-height:17px;
+}
+#pre1, #pre2, #post1, #post2, #xmlStart, #xmlFinish
+{
+	font-size:13px;
+	background-color: gray;
+	filter:alpha(opacity=20);
+	opacity:0.2;
+}
+#xmlStart, #xmlFinish
+{
+	background-color: dodgerBlue;
+}
+
+#secondary
+{
+	color:white;
+	background-color:white;
+	font-size:13px;
+	line-height:17px;
+}
+#errors
+{
+	font-size:13px;
+	line-height:17px;
+}
+#editorinfo
+{
+	background-color:White;
+	color:Black;
+	border-top:1px solid #000;
+}
+#scrollbarY, #scrollbarX_bg
+{
+	background-color:white;
+	line-height: 17px;
+}
+
+/* SYNTAX HIGHLLIGHT */
+b.tab{	background-image:none; }
+i	 {	color:black; }
+
+/*	Javascript
+	natively black text, white background
+*/
+b.jsLang{	color:Navy; }
+b.jsFun{	color:Navy; }
+b.jsObj{	color:#099; }
+b.jsMeth{	color:Black; }
+b.jsEvent{	color:Black; }
+b.jsNum{	color:Red; }
+b.jsRegx{	color:#090; }
+b.jsStr{	color:Blue; }
+b.jsCom{	color:Gray; }
+
+/*	XML */
+b.xmlComment		{color:Gray;}
+b.xmlInstruction	{color:maroon;}
+b.xmlElement		{color:Navy;}
+b.xmlElementScript	{color:maroon; }
+b.xmlElementStyle	{color:purple; }
+b.xmlAttributeName	{color:Navy;}
+b.xmlAttributeEqual	{color:blue;}
+b.xmlAttributeValue	{color:blue;}
+b.xmlText			{}
+b.xmlWhitespace		{}
+b.xmlDoctype		{color:blue;}
+b.xmlCDataOpen, 
+b.xmlCDataClose		{color:red;}
+b.xmlCData			{color:Dimgray; font-style:italic;}
+
+/* 	CSS : natively black text, white background */
+/* selector (#id, .Class, @something)*/
+b.cssSel{ color:magenta; }
+b.cssKey{ color:navy; }
+b.cssVal{ color:Blue; }
+/* string: url('str str') */
+b.cssStr{ color:ForestGreen; }
+/* comment */
+b.cssCom{ color:gray; }
+/* @media */
+b.cssMed{ color:darkred; }

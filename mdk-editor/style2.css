@@ -1,0 +1,109 @@
+.select
+{
+	background-color: DarkBlue;
+}
+#linenumbers
+{
+	background-color: black;
+	color: DimGray;
+}
+.curserWriteON
+{
+	border-left:solid 1px #FFF;
+}
+.curserOverWriteON
+{
+	border-left:0px;
+	background-color:white;
+	color:black;
+}
+.curserOFF
+{
+	border-left:0px;
+	background-color:Transparent;
+}
+#editor
+{
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+#content
+{
+	color: darkgray;
+}
+#pre1, #pre2, #post1, #post2,#xmlStart, #xmlFinish
+{
+	font-size:16px;
+	background-color: gray;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+#xmlStart, #xmlFinish
+{
+	background-color: pink;
+}
+#secondary
+{
+	color: Black;
+	background-color: Black;
+}
+#editorinfo,
+{
+	background-color: black;
+	color: DimGray;
+	border-top:1px solid DimGray;
+}
+#scrollbarY, #scrollbarX_bg
+{
+	background-color:Black;
+}
+#editorinfo
+{
+	background-color: black;
+	color: DimGray;
+	border-top:1px solid DimGray;
+}
+
+/* SYNTAX HIGHLLIGHT */
+i	 {	color:darkgray; }
+
+/*	Javascript
+	natively gray text, black background
+*/
+b.jsLang{	color: Chocolate;}
+b.jsFun{	color: blueViolet;}
+b.jsObj{	color: Chartreuse;}
+b.jsMeth{	color: CornflowerBlue;}
+b.jsRegx{	color: cyan;}
+b.jsNum{	color: Yellow; }
+b.jsEvent{	color: Magenta; }
+b.jsStr{	color: LawnGreen; }
+b.jsCom{	color: DimGray; }
+
+/*	XML */
+b.xmlComment        { color: DimGray; }
+b.xmlInstruction    { color: Yellow; }
+b.xmlElement        { color: Chartreuse; }
+b.xmlElementScript	{ color: Chartreuse; }
+b.xmlElementStyle	{ color: Chartreuse; }
+b.xmlAttributeName  { color: Chocolate; }
+b.xmlAttributeEqual { color: Cyan; }
+b.xmlAttributeValue { color: Cyan; }
+b.xmlText           {}
+b.xmlWhitespace     {}
+b.xmlDoctype        { color: BlueViolet; }
+b.xmlCDataOpen,
+b.xmlCDataClose		{ color: red; }
+b.xmlCData			{ font-style: italic; color: White; }
+
+/* 	CSS : natively black text, white background */
+/* selector (#id, .Class, @something)*/
+b.cssSel{ color:Chocolate; }
+b.cssKey{ color:BlueViolet; }
+b.cssVal{ color:CornFlowerBlue; }
+/* string: url('str str') */
+b.cssStr{ color:LightSalmon; }
+/* comment */
+b.cssCom{ color:DarkGray; }
+/* @media */
+b.cssMed{ color:DeepPink; }

@@ -1,10 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
-	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 	<title>MDK-Editor</title>
 	
 	<!-- JSLint -->
-	<script src="fulljslint.js" type="text/javascript"></script>
+	<script src="Tools/fulljslint.js" type="text/javascript"></script>
 	
 	<!-- Editor -->
 	<script src="Parsers.js" type="text/javascript"></script>
@@ -21,45 +23,45 @@
 	<script src="ContextMenu.js" type="text/javascript"></script>
 	
 	<!-- Stylesheets -->
-	<link href="Default.css" rel="stylesheet" type="text/css">
-	<link href="style3.css" rel="stylesheet" type="text/css" id="Theme">
+	<link href="Default.css" rel="stylesheet" type="text/css" />
+	<link href="style3.css"  rel="stylesheet" type="text/css" id="Theme" />
 </head>
 <body>
-	<h1>MDK-Editor © 2008 (v2.10)</h1>
-	<h1 class="shadow">MDK-Editor © 2008</h1>
+	<h1>MDK-Editor &copy; 2008 (v2.10)</h1>
+	<h1 class="shadow">MDK-Editor &copy; 2008</h1>
 	
-	<div id="editor" style="width: 800px; height: 540px; left: 80px; top: 50px;">
+	<div id="editor">
 		<div id="contentContainer">
 			<div id="contentContatiner">
-				<div id="secondary" style="width: 800px; height: 540px;"></div>
-				<div id="content" style="width: 800px; height: 540px;"><i>&lt;</i><b class="xmlElement">html</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i><b class="xmlElement">head</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i><b class="xmlElementScript">script</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><b class="jsFun">function</b>&nbsp;func(){}<br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i>/<b class="xmlElementScript">script</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i><b class="xmlElementStyle">style</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><b class="cssSel">#div1</b>{&nbsp;<b class="cssKey">color</b>:<b class="cssVal">blue</b>;&nbsp;}<br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i>/<b class="xmlElementStyle">style</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i>/<b class="xmlElement">head</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i><b class="xmlElement">body</b>&nbsp;<b class="xmlAttributeName">onload</b>=<b class="xmlAttributeValue">'func();'</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i><b class="xmlElement">div</b>&nbsp;<b class="xmlAttributeName">id</b>=<b class="xmlAttributeValue">'div1'&nbsp;onclick='alert(1)'&nbsp;style='display:none;'</b><i>&gt;</i><i>&lt;</i>/<b class="xmlElement">div</b><i>&gt;</i><br><b class="tab">&nbsp;&nbsp;&nbsp;&nbsp;</b><i>&lt;</i>/<b class="xmlElement">body</b><i>&gt;</i><br><i>&lt;</i>/<b class="xmlElement">html</b><i>&gt;</i><br></div>
-				<div id="errors" style="display: none;"></div>
+				<div id="secondary"></div>
+				<div id="content"></div>
+				<div id="errors"></div>
 			</div>
 			
 			<div id="cursorContainer">
-				<div id="curser" class="curserWriteON" style="top: 0px; left: 0px;"> </div>
-				<div id="pre1" style="display: none;">&nbsp;</div>
-				<div id="pre2" style="display: none;">&nbsp;</div>
-				<div id="post1" style="display: block; top: 0px; left: 0px;">&nbsp;</div>
-				<div id="post2" style="display: block; top: 0px; left: 50px;">&nbsp;</div>
-				<div id="xmlStart" style="display: none;">&nbsp;</div>
-				<div id="xmlFinish" style="display: none;">&nbsp;</div>
+				<div id="curser">&nbsp;</div>
+				<div id="pre1">&nbsp;</div>
+				<div id="pre2">&nbsp;</div>
+				<div id="post1">&nbsp;</div>
+				<div id="post2">&nbsp;</div>
+				<div id="xmlStart">&nbsp;</div>
+				<div id="xmlFinish">&nbsp;</div>
 			</div>
 		</div>
 		
-		<div id="linenumbers" style="height: 540px;"><div class="line" id="r_0">0</div><div class="line" id="r_1">1</div><div class="line" id="r_2">2</div><div class="line" id="r_3">3</div><div class="line" id="r_4">4</div><div class="line" id="r_5">5</div><div class="line" id="r_6">6</div><div class="line" id="r_7">7</div><div class="line" id="r_8">8</div><div class="line" id="r_9">9</div><div class="line" id="r_10">10</div><div class="line" id="r_11">11</div><div class="line" id="r_12">12</div></div>
-		<div id="scrollbarX" style="width: 800px; display: none;"></div>
+		<div id="linenumbers"></div>
+		<div id="scrollbarX"></div>
 		<div id="scrollbarX_bg"></div>
-		<div id="editorinfo" style="width: 800px;">Row: 0	Col: 0	Char:0</div>
-		<div id="scrollbarY"><div style="height:594px;">&nbsp;</div></div>
+		<div id="editorinfo"></div>
+		<div id="scrollbarY"></div>
 		<div id="ContextMenu"></div>
 		<div id="Intellisense"></div>
-		<div id="errorexplain" style="top: 289px; left: 798px;"></div>
+		<div id="errorexplain"></div>
 	</div>
 	
 	<pre id="writeroot"></pre>
 	<select id="languageSelector" onchange="changeLanguage(this)">
-		<option value="none" selected="selected"> - Language - </option>
+		<option value="none"> - Language - </option>
 		<option value="Javascript">Javascript</option>
 		<option value="XML">XML</option>
 		<option value="HTML">HTML (test)</option>
@@ -67,18 +69,19 @@
 		<option value="Text">Text</option>
 	</select>
 	<select id="styleselector" onchange="changeStyle(this)">
-		<option value="none" selected="selected"> - Themes - </option>
+		<option value="none"> - Themes - </option>
 		<option value="style1.css">White</option>
 		<option value="style2.css">Black</option>
 		<option value="style3.css">Chalkboard</option>
 		<option value="style4.css">Neutral (VS)</option>
 		<option value="style5.css">Dreamweaver</option>
 	</select>
-	<button onclick="maximized=!maximized; resizeEditor(); this.blur();" id="SizeChanger">Change Size</button>
-	<input onchange="lock_vert=(this.checked); resizeEditor(); this.blur();" id="LockVertical" type="checkbox">
+	<button onclick="maximized=!maximized; resizeEditor(); this.blur();"
+			id="SizeChanger" >Change Size</button>
+	<input onchange="lock_vert=(this.checked); resizeEditor(); this.blur();" 
+		   type="checkbox"  id="LockVertical" />
 	<label id="lbl1" for="LockVertical">Lock Vertical</label>
 	
 	<textarea cols="1" rows="1" id="clipboard"></textarea>
-
-
-</body></html>
+</body>
+</html>

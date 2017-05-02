@@ -1,0 +1,104 @@
+.select
+{
+	background-color:#ccc;		
+}
+#linenumbers
+{
+	background-color:#eee;
+	color:Black;
+	border-right:1px solid #aaa;
+}
+.curserWriteON
+{
+	border-left:solid 1px #000;
+}
+.curserOverWriteON
+{
+	border-left:0px;
+	background-color:black;
+	color:White;
+}
+.curserOFF
+{
+	border-left:0px;
+	background-color:Transparent;
+}
+#editor
+{
+	border-left:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+#content
+{
+	color: black;
+}
+#pre1, #pre2, #post1, #post2, #xmlStart, #xmlFinish
+{
+	font-size:16px;
+	background-color: Gray;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+#xmlStart, #xmlFinish
+{
+	background-color: Plum;
+}
+#secondary
+{
+	color:White;
+	background-color:White;
+}
+#editorinfo
+{
+	background-color:White;
+	color:Black;
+	border-top:1px solid #000;
+}
+#scrollbarY, #scrollbarX_bg
+{
+	background-color:White;
+}
+
+/* SYNTAX HIGHLLIGHT */
+i	 {	color:black; }
+
+/*	Javascript
+	natively black text, white background
+*/
+b.jsLang{	color:Blue; }
+b.jsFun{	color:DarkBlue; }
+b.jsObj{	color:DarkRed; }
+b.jsMeth{ 	color:Brown; }
+b.jsRegx{	color:darkcyan}
+b.jsNum{	color:Red; }
+b.jsEvent{	color:Magenta; }
+b.jsStr{	color:forestGreen; }
+b.jsCom{	color:DimGray; }
+
+/*	XML */
+b.xmlComment		{color:forestGreen;}
+b.xmlInstruction	{color:maroon;}
+b.xmlElement		{color:#770077;}
+b.xmlElementScript	{color:#770077; }
+b.xmlElementStyle	{color:#770077; }
+b.xmlAttributeName	{color:black;}
+b.xmlAttributeEqual {color:gray;}
+b.xmlAttributeValue {color:blue;}
+b.xmlText			{}
+b.xmlWhitespace		{}
+b.xmlDoctype		{color:SteelBlue;font-style:italic;}
+b.xmlCDataOpen, 
+b.xmlCDataClose		{color:red;}
+b.xmlCData			{color:Dimgray;font-style:italic;}
+
+/* 	CSS : natively black text, white background */
+/* selector (#id, .Class, @something)*/
+b.cssSel{ color:Black; }
+b.cssKey{ color:Blue; }
+b.cssVal{ color:DeepPink; }
+/* string: url('str str') */
+b.cssStr{ color:ForestGreen; }
+/* comment */
+b.cssCom{ color:Gray; }
+/* @media */
+b.cssMed{ color:Red; }
